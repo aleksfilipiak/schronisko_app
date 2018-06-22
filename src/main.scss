@@ -1,0 +1,250 @@
+$font-color: #253f71;
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+
+.center-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+//background: #dde0b1; /* Old browsers */
+//background: -moz-radial-gradient(center, ellipse cover, #dde0b1 1%, #72a821 100%); /* FF3.6-15 */
+//background: -webkit-radial-gradient(center, ellipse cover, #dde0b1 1%,#72a821 100%); /* Chrome10-25,Safari5.1-6 */
+//background: radial-gradient(ellipse at center, #dde0b1 1%,#72a821 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dde0b1', endColorstr='#72a821',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+.container {
+  width: 1200px;
+  min-height: 500px;
+  display: flex;
+  background: radial-gradient(ellipse at center, #dde0b1 1%, #72a821 100%);
+  font-family: 'Montserrat', sans-serif;
+
+  form.login-form {
+    font-size: 1.4em;
+    color: $font-color;
+
+    label {
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+    input {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif;
+    }
+    button {
+      /*button default style*/
+      background: none;
+      border: 0;
+
+      /* cursor: default; */
+      font: inherit;
+      line-height: normal;
+      overflow: visible;
+      text-decoration: none;
+      padding: 0;
+      color: inherit;
+      font-family: 'Montserrat', sans-serif;
+      margin: 15px;
+      a {
+        color: $font-color;
+        text-decoration: none;
+        &:visited {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  //border: 1px grey solid;
+  position: fixed;
+  color: $font-color;
+  margin: 20px;
+
+}
+
+.fas.fa-bars {
+  font-size: 3rem;
+}
+
+.nav {
+  //border: 1px black solid;
+}
+
+.choose-animal {
+  height: 150px;
+
+  //border: 2px red solid;
+  div {
+    width: 100px;
+  }
+
+}
+
+.main-buttons {
+  height: 150px;
+  width: 215px;
+  border: 3px solid $font-color;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  border-radius: 5%;
+  font-weight: bolder;
+  margin: 3px;
+  color: $font-color;
+
+}
+
+.first-view {
+  flex: 1 1 0;
+  //border: 1px green solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    flex-direction: row;
+    list-style: none;
+    width: 550px;
+    justify-content: space-between;
+    //border: 1px black dotted;
+    margin: 0;
+    //li{
+    //  display: flex;
+    //  align-items: center;
+    //  justify-content: center;
+    //  border: 1px grey solid;
+    //  border-radius: 50%;
+    //  padding: 5px;
+    //}
+
+  }
+}
+
+/*FoundAnimal.js*/
+
+.addAnimalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px;
+  div {
+    //border: 1px black dotted;
+    color: $font-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &:nth-child(4){
+      width: 300px;
+    }
+    label {
+      text-align: center;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+    }
+    input {
+      text-align: center;
+      width: 150px;
+      margin-left: 10px;
+      font-size: 1em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif;
+    }
+    textarea{
+      margin-left: 10px;
+      font-size: 1em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif;
+    }
+    select{
+      margin-left: 10px;
+      font-size: 1em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+  button {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: $font-color;
+    width: 150px;
+    margin-top: 30px;
+  }
+}
+
+.footer {
+  font-size: 0.8em;
+  color: $font-color;
+  a {
+    color: $font-color;
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
+
+.header {
+  margin: 35px;
+  color: white;
+  font-weight: lighter;
+}
+
+.ulAnimals{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.filter-div{
+  button {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: $font-color;
+    width: 150px;
+    margin-top: 30px;
+  }
+}
+
+.filter{
+  margin-left: 10px;
+  font-size: 1em;
+  color: $font-color;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  select{
+    margin-left: 10px;
+    font-size: 1em;
+    color: #72a821;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+}
+
+.come-back{
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  color: $font-color;
+  width: 150px;
+  margin: 30px;
+}

@@ -1,0 +1,180 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: grey; }
+
+.center-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.container {
+  width: 1200px;
+  min-height: 500px;
+  display: flex;
+  background: radial-gradient(ellipse at center, #dde0b1 1%, #72a821 100%);
+  font-family: 'Montserrat', sans-serif; }
+  .container form.login-form {
+    font-size: 1.4em;
+    color: #253f71; }
+    .container form.login-form label {
+      text-align: center;
+      padding: 15px;
+      font-weight: bold; }
+    .container form.login-form input {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif; }
+    .container form.login-form button {
+      /*button default style*/
+      background: none;
+      border: 0;
+      /* cursor: default; */
+      font: inherit;
+      line-height: normal;
+      overflow: visible;
+      text-decoration: none;
+      padding: 0;
+      color: inherit;
+      font-family: 'Montserrat', sans-serif;
+      margin: 15px; }
+      .container form.login-form button a {
+        color: #253f71;
+        text-decoration: none; }
+        .container form.login-form button a:visited {
+          text-decoration: none; }
+
+.burger {
+  position: fixed;
+  color: #253f71;
+  margin: 20px; }
+
+.fas.fa-bars {
+  font-size: 3rem; }
+
+.choose-animal {
+  height: 150px; }
+  .choose-animal div {
+    width: 100px; }
+
+.main-buttons {
+  height: 150px;
+  width: 215px;
+  border: 3px solid #253f71;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  border-radius: 5%;
+  font-weight: bolder;
+  margin: 3px;
+  color: #253f71; }
+
+.first-view {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .first-view ul {
+    flex-direction: row;
+    list-style: none;
+    width: 550px;
+    justify-content: space-between;
+    margin: 0; }
+
+/*FoundAnimal.js*/
+.addAnimalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px; }
+  .addAnimalForm div {
+    color: #253f71;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    .addAnimalForm div:nth-child(4) {
+      width: 300px; }
+    .addAnimalForm div label {
+      text-align: center;
+      padding: 5px 0;
+      display: flex;
+      align-items: center; }
+    .addAnimalForm div input {
+      text-align: center;
+      width: 150px;
+      margin-left: 10px;
+      font-size: 1em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif; }
+    .addAnimalForm div textarea {
+      margin-left: 10px;
+      font-size: 1em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif; }
+    .addAnimalForm div select {
+      margin-left: 10px;
+      font-size: 1em;
+      color: #72a821;
+      font-weight: lighter;
+      font-family: 'Montserrat', sans-serif; }
+  .addAnimalForm button {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #253f71;
+    width: 150px;
+    margin-top: 30px; }
+
+.footer {
+  font-size: 0.8em;
+  color: #253f71; }
+  .footer a {
+    color: #253f71;
+    text-decoration: none; }
+    .footer a:visited {
+      text-decoration: none; }
+
+.header {
+  margin: 35px;
+  color: white;
+  font-weight: lighter; }
+
+.ulAnimals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none; }
+
+.filter-div button {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  color: #253f71;
+  width: 150px;
+  margin-top: 30px; }
+
+.filter {
+  margin-left: 10px;
+  font-size: 1em;
+  color: #253f71;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif; }
+  .filter select {
+    margin-left: 10px;
+    font-size: 1em;
+    color: #72a821;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif; }
+
+.come-back {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  color: #253f71;
+  width: 150px;
+  margin: 30px; }
