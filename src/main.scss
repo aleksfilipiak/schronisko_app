@@ -83,7 +83,31 @@ body {
 
 .nav {
   //border: 1px black solid;
+  ul {
+    list-style: none;
+    color: $font-color;
+  }
 }
+
+//animacja slidedown-up burgera
+
+.slided-up {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 1s,
+  opacity 1s linear;
+
+}
+
+.slided-down {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 1s,
+  opacity 1s linear;
+  transition-delay: 0s;
+}
+
+//animacja slidedown-up burgera
 
 .choose-animal {
   height: 150px;
@@ -96,7 +120,7 @@ body {
 }
 
 .main-buttons {
-  height: 150px;
+  height: 125px;
   width: 215px;
   border: 3px solid $font-color;
   background-color: white;
@@ -108,6 +132,10 @@ body {
   color: $font-color;
 
 }
+
+//animacja ostatniego buttona
+
+//koniec animacji
 
 .first-view {
   flex: 1 1 0;
@@ -137,50 +165,124 @@ body {
 /*FoundAnimal.js*/
 
 .addAnimalForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 35px;
   div {
-    //border: 1px black dotted;
+    height: 70px;
     color: $font-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    &:nth-child(4){
-      width: 300px;
-    }
+    width: 85%;
+
     label {
       text-align: center;
       padding: 5px 0;
       display: flex;
       align-items: center;
+      height: 40px;
     }
     input {
       text-align: center;
-      width: 150px;
-      margin-left: 10px;
       font-size: 1em;
       color: #72a821;
       font-weight: lighter;
       font-family: 'Montserrat', sans-serif;
+      height: 40px;
     }
-    textarea{
-      margin-left: 10px;
+    textarea {
       font-size: 1em;
       color: #72a821;
       font-weight: lighter;
       font-family: 'Montserrat', sans-serif;
+      height: 40px;
     }
-    select{
-      margin-left: 10px;
+    select {
       font-size: 1em;
       color: #72a821;
       font-weight: lighter;
       font-family: 'Montserrat', sans-serif;
+      height: 40px;
     }
   }
+
+  .timePlaceImg {
+    input {
+      &:nth-child(1), &:nth-child(3) {
+        width: 15px;
+      }
+
+      &:nth-child(5) {
+        width: 300px;
+      }
+      &:nth-child(2), &:nth-child(4) {
+        width: 125px;
+      }
+    }
+  }
+
+  .basicInfo {
+    input {
+      &:nth-child(1) {
+        width: 160px;
+      }
+
+      &:nth-child(3) {
+        width: 115px;
+      }
+      &:nth-child(5) {
+        width: 135px;
+      }
+    }
+    select {
+      &:nth-child(2) {
+        width: 115px;
+      }
+    }
+  }
+
+  .additionalInfo {
+
+    div {
+      &:nth-child(2n) {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    label {
+      &:nth-child(3) {
+        width: 145px;
+      }
+    }
+    input {
+      width: 15px;
+    }
+    textarea {
+      width: 190px;
+      &:nth-child(4) {
+        width: 285px;
+      }
+    }
+  }
+
+  .forAdditionalTextarea {
+    textarea {
+      width: 260px;
+    }
+  }
+
+  .image{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+  }
+
   button {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
@@ -190,9 +292,12 @@ body {
   }
 }
 
+/*FoundAnimal.js end*/
+
 .footer {
   font-size: 0.8em;
   color: $font-color;
+  margin: 10px;
   a {
     color: $font-color;
     text-decoration: none;
@@ -208,14 +313,14 @@ body {
   font-weight: lighter;
 }
 
-.ulAnimals{
+.ulAnimals {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
 
-.filter-div{
+.filter-div {
   button {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
@@ -225,13 +330,13 @@ body {
   }
 }
 
-.filter{
+.filter {
   margin-left: 10px;
   font-size: 1em;
   color: $font-color;
   font-weight: lighter;
   font-family: 'Montserrat', sans-serif;
-  select{
+  select {
     margin-left: 10px;
     font-size: 1em;
     color: #72a821;
@@ -241,7 +346,7 @@ body {
 
 }
 
-.come-back{
+.come-back {
   background-color: white;
   font-family: 'Montserrat', sans-serif;
   color: $font-color;

@@ -18,6 +18,9 @@ import wolf from './images/icons8-wolf-48.png';
 import unicorn from './images/icons8-unicorn-48.png';
 
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
 class BurgerNav extends React.Component {
     constructor(props) {
         super(props);
@@ -28,31 +31,43 @@ class BurgerNav extends React.Component {
 
     showNav = () => {
         this.setState({
-            clicked: !this.state.clicked
+            clicked: true
+            //clicked: !this.state.clicked  dziala w stylu toggle
         })
     };
+    hideNav = () => {
+        this.setState({
+            clicked: false
+        })
+    }
+
 
     render() {
+        const menu = ['Zweryfikuj profil instytucji', 'Instytucje na skróty', 'Info o apce', 'Wyloguj'];
         const nav =
-            <div className='nav'>
+
+
+            <div className={'nav ' + (this.state.clicked ? 'slided-down' : 'slided-up')}>
                 <ul>
-                    <li>Zweryfikuj profil schroniska/fundacji</li>
-                    <li>Instytucje na skróty</li>
-                    <li>Info o apce</li>
-                    <li>Wyloguj</li>
+
+                    {menu.map((item, index) => <li key={index}>{item}</li>)}
+                    <i className="fas fa-arrow-up" onClick={this.hideNav}/>
+
                 </ul>
-            </div>;
+            </div>
+
+
         return (
             <div className='burger'>
-                <i onClick={this.showNav} className='fas fa-bars'></i>
-                {this.state.clicked ? nav : null}
+                <i onClick={this.showNav} className='fas fa-bars'/>
+                {nav}
             </div>
         );
     }
 }
 
-class Footer extends React.Component{
-    render(){
+class Footer extends React.Component {
+    render() {
         return <p className='footer'>Ikonki pobrane z: <a href='https://icons8.com'>www.icons8.com</a></p>
     }
 }
@@ -63,7 +78,10 @@ class FirstView extends React.Component {
         this.state = {
             mouseenter1: false,
             mouseenter2: false,
-            mouseenter3: false
+            mouseenter3: false,
+            opacity: 0,
+            scale: 1,
+
 
         }
     }
@@ -71,18 +89,24 @@ class FirstView extends React.Component {
     showAnimalsIcons = (param) => {
         this.setState({
             [`mouseenter${param}`]: true,
-            [`display${param}`]: 'none'
+            [`display${param}`]: 'none',
+            opacity: 1,
+            scale: 1.1
         })
     };
 
     hideAnimalsIcons = (param) => {
         this.setState({
             [`mouseenter${param}`]: false,
-            [`display${param}`]: 'block'
+            [`display${param}`]: 'block',
+            opacity: 0,
+            scale: 1
         })
     }
 
+
     render() {
+        const styles = {transition: 'all 0.2s ease-out'};
 
         const animalsIcons = [
             {
@@ -113,14 +137,17 @@ class FirstView extends React.Component {
                 name: 'inne',
                 img: unicorn
             }];
-        const list = animalsIcons.map((item, index) => <li key={index} className='icon-list'><Link to={`/found/${item.name}`}><img src={item.img}
-                                                                                                             alt=""/></Link>
+        const list = animalsIcons.map((item, index) => <li key={index} className='icon-list'><Link
+            to={`/found/${item.name}`}><img src={item.img}
+                                            alt=""/></Link>
         </li>);
-        const list2 = animalsIcons.map((item, index) => <li key={index} className='icon-list'><Link to={`/found/${item.name}`}><img src={item.img}
-                                                                                                             alt=""/></Link>
+        const list2 = animalsIcons.map((item, index) => <li key={index} className='icon-list'><Link
+            to={`/lost/${item.name}`}><img src={item.img}
+                                           alt=""/></Link>
         </li>);
-        const list3 = animalsIcons.map((item, index) => <li key={index} className='icon-list'><Link to={`/found/${item.name}`}><img src={item.img}
-                                                                                                             alt=""/></Link>
+        const list3 = animalsIcons.map((item, index) => <li key={index} className='icon-list'><Link
+            to={`/aid/${item.name}`}><img src={item.img}
+                                          alt=""/></Link>
         </li>);
         return (
             <div className='first-view'>
@@ -128,7 +155,8 @@ class FirstView extends React.Component {
                     <button style={{display: this.state.display1}} onMouseEnter={() => this.showAnimalsIcons(1)}
                             className='main-buttons'>Znalezłam/em zwierzę
                     </button>
-                    <ul className='center-col'>
+                    <ul className='center-col'
+                        style={{...styles, opacity: this.state.opacity, transform: 'scale(' + this.state.scale + ')'}}>
                         {this.state.mouseenter1 ? list : null}
                     </ul>
                 </div>
@@ -136,15 +164,17 @@ class FirstView extends React.Component {
                     <button style={{display: this.state.display2}} onMouseEnter={() => this.showAnimalsIcons(2)}
                             className='main-buttons'>Zgubiłam/em zwierzę
                     </button>
-                    <ul className='center-col'>
+                    <ul className='center-col'
+                        style={{...styles, opacity: this.state.opacity, transform: 'scale(' + this.state.scale + ')'}}>
                         {this.state.mouseenter2 ? list2 : null}
                     </ul>
                 </div>
-                <div className='choose-animal center-col' onMouseLeave={() => this.hideAnimalsIcons(3)}>
+                <div className='choose-animal center-col pulse' onMouseLeave={() => this.hideAnimalsIcons(3)}>
                     <button style={{display: this.state.display3}} onMouseEnter={() => this.showAnimalsIcons(3)}
                             className='main-buttons'>Ranne zwierzę <br/> Pierwsza pomoc
                     </button>
-                    <ul className='center-col'>
+                    <ul className='center-col'
+                        style={{...styles, opacity: this.state.opacity, transform: 'scale(' + this.state.scale + ')'}}>
                         {this.state.mouseenter3 ? list3 : null}
                     </ul>
                 </div>
@@ -163,35 +193,84 @@ class MainPage extends React.Component {
     }
 }
 
+/*obce*/
+
+function validate(email, password) {
+    // true means invalid, so our conditions got reversed
+    return {
+        email: email.length === 0,
+        pass: password.length === 0,
+    };
+}
+
+/*obce*/
+
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
             pass: '',
-            isEnabled: true
+
+            /*obce*/
+            everFocusedEmail: false,
+            everFocusedPassword: false,
+            inFocus: '',
+            /*obce*/
         }
     }
 
     changeHandler = (event) => {
         this.setState({
             [event.currentTarget.id]: event.currentTarget.value,
-            isEnabled: (this.state.email.length > 0 && this.state.pass.length > 0) ? false : true
 
         })
     };
 
+    handleSubmit = (event) => {
+
+        if (!this.canBeSubmitted()) {
+            event.preventDefault();
+
+            return;
+        }
+        const {email, pass} = this.state;
+        alert(`Signed up with email: ${email} password: ${pass}`);
+    }
+
+    canBeSubmitted() {
+        const errors = validate(this.state.email, this.state.pass);
+        const isDisabled = Object.keys(errors).some(x => errors[x]);
+        return !isDisabled;
+
+    }
+
 
     render() {
+        const errors = validate(this.state.email, this.state.pass);
+        const isDisabled = Object.keys(errors).some(x => errors[x]);
+        console.log(errors);
+        console.log(isDisabled);
+
         return (<div>
-            <form action="" className='login-form center-col'>
+            <form action="#/main-page"
+                  className='login-form center-col'
+                  onSubmit={this.handleSubmit}>
                 <label>email
-                    <input type='email' id='email' onChange={(event) => this.changeHandler}></input>
+                    <input type='email'
+                           id='email'
+                           onChange={this.changeHandler}
+                           value={this.state.email}/>
                 </label>
                 <label>hasło
-                    <input type='password' id='pass' onChange={(event) => this.changeHandler}></input>
+                    <input type='password'
+                           id='pass'
+                           onChange={this.changeHandler}
+                           value={this.state.pass}/>
                 </label>
-                <button type='submit' disabled={this.state.isEnabled}><Link to='/main-page'>Zaloguj</Link></button>
+                <input type='submit'
+                       value='Zaloguj'
+                       disabled={isDisabled}/>
                 <button><Link to='/register-page'>Zarejestruj</Link></button>
             </form>
         </div>)
@@ -202,8 +281,20 @@ class RegisterForm extends React.Component {
     render() {
         return (
             <div>
-                FORMULARZ REJESTRACJI
-                <button><Link to='/main-page'>Zarejestruj</Link></button>
+                <form action="#/main-page" className='center-col'>
+                    <input type="email" placeholder='Podaj swój email'/>
+                    <input type="pass" placeholder='Podaj hasło'/>
+                    <input type="pass" placeholder='Powtórz hasło'/>
+                    <input type="text" placeholder='Podaj nick'/>
+                    <label htmlFor="">Wybierz typ profilu</label>
+                    <select name="chooseActivity" id="">
+                        <option value="shelterWorker">Pracownik schroniska</option>
+                        <option value="foundationWorker">Pracownik fundacji</option>
+                        <option value="associationMember">Członek stowarzyszenia</option>
+                        <option value="volunteer">Wolontariusz</option>
+                        <option value="private">Profil prywatny</option>
+                    </select>
+                </form>
             </div>
         )
     }

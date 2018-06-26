@@ -57,13 +57,28 @@ body {
 .fas.fa-bars {
   font-size: 3rem; }
 
+.nav ul {
+  list-style: none;
+  color: #253f71; }
+
+.slided-up {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 1s, opacity 1s linear; }
+
+.slided-down {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 1s, opacity 1s linear;
+  transition-delay: 0s; }
+
 .choose-animal {
   height: 150px; }
   .choose-animal div {
     width: 100px; }
 
 .main-buttons {
-  height: 150px;
+  height: 125px;
   width: 215px;
   border: 3px solid #253f71;
   background-color: white;
@@ -88,43 +103,74 @@ body {
 
 /*FoundAnimal.js*/
 .addAnimalForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 35px; }
   .addAnimalForm div {
+    height: 70px;
     color: #253f71;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; }
-    .addAnimalForm div:nth-child(4) {
-      width: 300px; }
+    width: 85%; }
     .addAnimalForm div label {
       text-align: center;
       padding: 5px 0;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      height: 40px; }
     .addAnimalForm div input {
       text-align: center;
-      width: 150px;
-      margin-left: 10px;
       font-size: 1em;
       color: #72a821;
       font-weight: lighter;
-      font-family: 'Montserrat', sans-serif; }
+      font-family: 'Montserrat', sans-serif;
+      height: 40px; }
     .addAnimalForm div textarea {
-      margin-left: 10px;
       font-size: 1em;
       color: #72a821;
       font-weight: lighter;
-      font-family: 'Montserrat', sans-serif; }
+      font-family: 'Montserrat', sans-serif;
+      height: 40px; }
     .addAnimalForm div select {
-      margin-left: 10px;
       font-size: 1em;
       color: #72a821;
       font-weight: lighter;
-      font-family: 'Montserrat', sans-serif; }
+      font-family: 'Montserrat', sans-serif;
+      height: 40px; }
+  .addAnimalForm .timePlaceImg input:nth-child(1), .addAnimalForm .timePlaceImg input:nth-child(3) {
+    width: 15px; }
+  .addAnimalForm .timePlaceImg input:nth-child(5) {
+    width: 300px; }
+  .addAnimalForm .timePlaceImg input:nth-child(2), .addAnimalForm .timePlaceImg input:nth-child(4) {
+    width: 125px; }
+  .addAnimalForm .basicInfo input:nth-child(1) {
+    width: 160px; }
+  .addAnimalForm .basicInfo input:nth-child(3) {
+    width: 115px; }
+  .addAnimalForm .basicInfo input:nth-child(5) {
+    width: 135px; }
+  .addAnimalForm .basicInfo select:nth-child(2) {
+    width: 115px; }
+  .addAnimalForm .additionalInfo div:nth-child(2n) {
+    justify-content: center;
+    align-items: center; }
+  .addAnimalForm .additionalInfo label:nth-child(3) {
+    width: 145px; }
+  .addAnimalForm .additionalInfo input {
+    width: 15px; }
+  .addAnimalForm .additionalInfo textarea {
+    width: 190px; }
+    .addAnimalForm .additionalInfo textarea:nth-child(4) {
+      width: 285px; }
+  .addAnimalForm .forAdditionalTextarea textarea {
+    width: 260px; }
+  .addAnimalForm .image {
+    width: 300px;
+    height: 300px;
+    background-color: white; }
+    .addAnimalForm .image img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
   .addAnimalForm button {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
@@ -132,9 +178,11 @@ body {
     width: 150px;
     margin-top: 30px; }
 
+/*FoundAnimal.js end*/
 .footer {
   font-size: 0.8em;
-  color: #253f71; }
+  color: #253f71;
+  margin: 10px; }
   .footer a {
     color: #253f71;
     text-decoration: none; }

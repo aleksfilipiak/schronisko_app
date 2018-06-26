@@ -13,7 +13,8 @@ class AnimalsMenager extends React.Component {
         super(props);
         this.state = {
             loading: true,
-            display: 'block'
+            display: 'block',
+            tagFilter:''
 
         };
         this.baseUrl = `http://localhost:3001/dogs`
@@ -74,8 +75,13 @@ class AnimalsMenager extends React.Component {
 
         if (this.state.loading) return <h1>Ładuję dane</h1>;
 
-        const baseDataReversed = this.state.data.sort(function (a, b) {
+        let baseDataReversed = this.state.data.sort(function (a, b) {
             return b.id - a.id
+        });
+
+        baseDataReversed = baseDataReversed.filter((animal)=> {
+            if (this.state.tagFilter.indexOf('unknown'))
+                return animal.sex === this.state.tagFilter
         });
 
         const animals = baseDataReversed.map((animal, i) => {
@@ -105,6 +111,14 @@ class AnimalsMenager extends React.Component {
         });
 
         return <div>
+            <label className='filter'>Szukaj według płci
+                <select name="" id="tagFilter" value = {this.state.tagFilter} onChange={e=>this.handleInputFilter(e)}>
+                    <option value="unknown">nie wiadomo</option>
+                    <option value="male">samiec</option>
+                    <option value="female">samica</option>
+                </select>
+
+            </label>
             <ul className='ulAnimals'>{animals}</ul>
         </div>
 

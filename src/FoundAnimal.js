@@ -13,7 +13,7 @@ class AnimalsMenager extends React.Component {
         super(props);
         this.state = {
             loading: true,
-            tagFilter:''
+            tagFilter: ''
 
         };
         this.baseUrl = `http://localhost:3001/dogs`
@@ -62,28 +62,26 @@ class AnimalsMenager extends React.Component {
         console.log(id, i); //osobno wywalić z fronta splicem, osobno z fetcha
     };
 
-    handleInputFilter = (event) =>{
+    handleInputFilter = (event) => {
         this.setState({
             [event.currentTarget.id]: event.currentTarget.value
         })
     };
 
-    filter = () =>{
+    filter = () => {
         let animalsLoaded = [...this.state.data],
-            result= [],
-            sex='';
+            result = [],
+            sex = '';
 
         //searchbar
 
-        if(this.state.tagFilter.length > 0 ){
-            animalsLoaded = animalsLoaded.filter(animal=>{
+        if (this.state.tagFilter.length > 0) {
+            animalsLoaded = animalsLoaded.filter(animal => {
                 const sex = animal.sex.toLowerCasae();
                 const sexSearch = this.state.tagFilter.toLowerCase();
                 return sex.includes(sexSearch)
             })
         }
-
-
 
 
     }
@@ -92,15 +90,14 @@ class AnimalsMenager extends React.Component {
     render() {
 
 
-
         if (this.state.loading) return <h1>Ładuję dane</h1>;
         let baseDataReversed = this.state.data.sort(function (a, b) {
             return b.id - a.id
         });
 
-        baseDataReversed = baseDataReversed.filter((animal)=> {
+        baseDataReversed = baseDataReversed.filter((animal) => {
             if (this.state.tagFilter.indexOf('unknown'))
-            return animal.sex === this.state.tagFilter
+                return animal.sex === this.state.tagFilter
         });
 
         const animals = baseDataReversed.map((animal, i) => {
@@ -126,7 +123,7 @@ class AnimalsMenager extends React.Component {
 
         return <div className='center-col filter-div'>
             <label className='filter'>Szukaj według płci
-                <select name="" id="tagFilter" value = {this.state.tagFilter} onChange={e=>this.handleInputFilter(e)}>
+                <select name="" id="tagFilter" value={this.state.tagFilter} onChange={e => this.handleInputFilter(e)}>
                     <option value="unknown">nie wiadomo</option>
                     <option value="male">samiec</option>
                     <option value="female">samica</option>
@@ -164,7 +161,8 @@ class FoundForm extends React.Component {
             chipNumb: '',
             marks: '',
             additional: '',
-            img: ''
+            img: '',
+            place: ''
         }
     }
 
@@ -221,7 +219,8 @@ class FoundForm extends React.Component {
             chipNumb: this.state.chipNumb,
             marks: this.state.marks,
             additional: this.state.additional,
-            img: this.state.img
+            img: this.state.img,
+            place: this.state.place
         };
 
         fetch(this.baseUrl, {
@@ -290,111 +289,119 @@ class FoundForm extends React.Component {
         return (
             <div>
                 <div className='header'>
-                   <h1>Znalezione zwierzę: {this.props.match.params.animal}</h1>
+                    <h1>Znalezione zwierzę: {this.props.match.params.animal}</h1>
                 </div>
                 <div>
-                    <form action="" className='addAnimalForm'>
-                        <div>
+                    <form action="" className='addAnimalForm center-col'>
 
-                        <label>aktualna data
-                            <input type="checkbox"
-                                   checked={this.state.isChecked1}
-                                   onChange={this.switchCheckbox1}></input>
-                        </label>
-                        <label>data:
+                        <div className='timePlaceImg'>
+                            <label>aktualna data
+                                <input type="checkbox"
+                                       checked={this.state.isChecked1}
+                                       onChange={this.switchCheckbox1}/>
+                            </label>
                             <input id='dzien'
                                    onChange={this.changeHandlerDay}
                                    disabled={this.state.isChecked1 ? true : false}
-                                   value={this.state.dzien}></input>
-                        </label>
-
-                        <label>aktualny czas
-                            <input type="checkbox"
-                                   checked={this.state.isChecked2}
-                                   onChange={this.switchCheckbox2}></input>
-                        </label>
-                        <label>godzina:
+                                   value={this.state.dzien}
+                                   placeholder='DD.MM.RRRR'/>
+                            <label>aktualny czas
+                                <input type="checkbox"
+                                       checked={this.state.isChecked2}
+                                       onChange={this.switchCheckbox2}/>
+                            </label>
                             <input id='czas'
                                    onChange={this.changeHandlerTime}
                                    disabled={this.state.isChecked2 ? true : false}
-                                   value={this.state.czas}></input></label>
-                </div>
-                        <div>
-                        <label>typ/rasa
+                                   value={this.state.czas}
+                                   placeholder='GG.MM.SS'/>
+                            <input id='place'
+                                   type="text"
+                                   placeholder='podaj miejsce zaginięca (np. ulicę)'
+                                   onChange={this.changeHandlerInput}
+                                   value={this.state.place}/>
+
+                        </div>
+                        <div className='basicInfo'>
                             <input type="text"
                                    id='type'
                                    value={this.state.type}
-                                   onChange={this.changeHandlerInput}></input>
-                        </label>
-                        <label>płeć:
+                                   onChange={this.changeHandlerInput}
+                                   placeholder='wpisz rasę lub typ'/>
                             <select id="sex"
                                     value={this.state.sex}
                                     onChange={this.changeHandlerInput}>
+                                <option value="" disabled selected hidden>podaj płeć</option>
                                 <option value="unknown">nie wiadomo</option>
                                 <option value="male">samiec</option>
                                 <option value="female">samica</option>
-
                             </select>
-                        </label>
-                        <label>waga:
                             <input type="text"
                                    id='weight'
                                    value={this.state.weight}
-                                   onChange={this.changeHandlerInput}/>
-                        </label>
-                        <label>Czy po kastracji:
+                                   onChange={this.changeHandlerInput}
+                                   placeholder='wpisz wagę'/>
                             <select id='castration'
                                     value={this.state.castration}
                                     onChange={this.changeHandlerInput}>
+                                <option value="" disabled selected hidden>jest po zabiegu kastracji?</option>
                                 <option value='unknown'>nie wiadomo</option>
                                 <option value='productive'>niekastrowany/niesterylizowany</option>
                                 <option value='eunuch'>kastrowany/<br/>sterylizowana</option>
                             </select>
-                        </label>
-                        </div>
-                        <div>
-                        <label>znaleziono coś przy nim:
-                            <input type="checkbox" checked={this.state.isChecked3}
-                                   onChange={this.switchCheckbox3}></input>
-
-                            {this.state.isChecked3 && <textarea
-                                id='additionalThings'
-                                placeholder='obroża, smycz, puszorki itp'
-                                value={this.state.additionalThings}
-                                onChange={this.changeHandlerInput}></textarea>}
-                        </label>
-                        <label>znaki szczególne:
-                            <textarea id="marks"
-                                      placeholder='opisz'
-                                      value={this.state.marks}
-                                      onChange={this.changeHandlerInput}></textarea>
-                        </label>
-                        <label>ma chipa:
-                            <input type="checkbox"
-                                   checked={this.state.isChecked4}
-                                   onChange={this.switchCheckbox4}/>
-                            {this.state.isChecked4 && <input id='chipNumb'
-                                                             value={this.state.chipNumb}
-                                                             onChange={this.changeHandlerInput}/>}
-                        </label>
-                        <label>dodatkowe informacje:
-                            <textarea id="additional"
-                                      placeholder='Np. okoliczności znalezienia'
-                                      value={this.state.additional}
-                                      onChange={this.changeHandlerInput}></textarea>
-                        </label>
-                        </div>
-                        <div>
-                        <label>
-                            dodaj zdjęcie:
                             <input id='img'
                                    type="text"
                                    value={this.state.img}
                                    onChange={this.changeHandlerInput}
-                            placeholder='dodaj link'/>
-                        </label>
+                                   placeholder='dodaj zdjęcie'/>
                         </div>
+                        <div className='additionalInfo'>
+
+                            <label>znaleziono coś przy nim:
+                                <input type="checkbox" checked={this.state.isChecked3}
+                                       onChange={this.switchCheckbox3}/>
+                            </label>
+
+
+                            <textarea id="marks"
+                                      placeholder='znaki szczególne'
+                                      value={this.state.marks}
+                                      onChange={this.changeHandlerInput}/>
+
+
+                            <label>posiada chip:
+                                <input type="checkbox"
+                                       checked={this.state.isChecked4}
+                                       onChange={this.switchCheckbox4}/>
+                            </label>
+
+
+                            <textarea id="additional"
+                                      placeholder='dodatkowe informacje'
+                                      value={this.state.additional}
+                                      onChange={this.changeHandlerInput}/>
+
+                        </div>
+                        <div className='forAdditionalTextarea'>
+                            <div>{this.state.isChecked3 && <textarea
+                                id='additionalThings'
+                                placeholder='obroża, smycz, puszorki itp'
+                                value={this.state.additionalThings}
+                                onChange={this.changeHandlerInput}/>}</div>
+                            <div>{this.state.isChecked4 && <input id='chipNumb'
+                                                                  value={this.state.chipNumb}
+                                                                  onChange={this.changeHandlerInput}
+                                                                  placeholder='wpisz nr chipa'/>}</div>
+                        </div>
+
+                        {this.state.img !== '' &&
+                        <div className='image'>
+                            <img src={this.state.img} alt=""/>
+                        </div>}
+
                         <button type='submit' onClick={this.addAnimal}>Dodaj zwierzę</button>
+
+
                     </form>
                 </div>
 
@@ -411,6 +418,6 @@ class FoundForm extends React.Component {
 }
 
 
-/*WYŚWIETL SOBIE INPUTY I WYPISANE PARAMETRY W INLINE-BLOCK - JAK WCZESNIEJ IKONKI*/
+
 
 export default FoundForm
