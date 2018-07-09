@@ -1,3 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+class CV extends React.Component{
+    render(){
+        return <div>Działa</div>
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded',function{
+ReactDOM.render(<CV/>, document.getElementById('begin'))
+});
+
+
 // /*function validate(email, password) {
 //     // true means invalid, so our conditions got reversed
 //     return {

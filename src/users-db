@@ -1,0 +1,14 @@
+module.exports = [
+    {
+        email: 'jan.kowalski@dup.pl',
+        pass: 'lololo',
+        name: 'Jan',
+        surname: 'Kowalski'
+    },
+    {
+        email: 'anna.kowalska@dup.pl',
+        pass: 'lalala',
+        name: 'Anna',
+        surname: 'Kowalska'
+    }
+];

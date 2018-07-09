@@ -82,9 +82,7 @@ class AnimalsMenager extends React.Component {
                 return sex.includes(sexSearch)
             })
         }
-
-
-    }
+    };
 
 
     render() {
@@ -103,20 +101,28 @@ class AnimalsMenager extends React.Component {
         const animals = baseDataReversed.map((animal, i) => {
             if (this.props.kind === animal.spieces)
                 return (
-                    <li key={animal.id}>
-                        <p>Dzień: {animal.day}</p>
-                        <p>Godzina: {animal.hour}</p>
-                        <p>Rasa/typ: {animal.type}</p>
-                        <p>Płeć: {animal.sex}</p>
-                        <p>Czy kastrat: {animal.castration}</p>
-                        <p>Waga: {animal.weight}</p>
-                        <p>Miał przy sobie: {animal.additionalThings}</p>
-                        <p>Miał chip: {animal.haveChip}</p>
-                        <p>O numerze: {animal.chipNumb}</p>
-                        <p>Znaki szczególne: {animal.marks}</p>
-                        <p>Dodatkowe info: {animal.additional}</p>
-                        <p><img src={animal.img} alt=""/></p>
-                        <button onClick={() => this.deleteAnimal(animal.id, i)}>Właściciel znaleziony</button>
+                    <li key={animal.id} className='foundOneLi'>
+                        <div className='foundOne'>
+
+                            <div className='foundOneWhen foundOneHover'>
+                                <p>Dzień: {animal.day} Godzina: {animal.hour}</p>
+                            </div>
+                            <img className='foundOneHover' src={animal.img} alt=""/>
+
+                            <div className='foundOneInfo'>
+                                <p>Rasa/typ: {animal.type}</p>
+                                <p>Płeć: {animal.sex}</p>
+                                <p>Czy kastrat: {animal.castration}</p>
+                                <p>Waga: {animal.weight}</p>
+                                <p>Miał przy sobie: {animal.additionalThings}</p>
+                                <p>Miał chip: {animal.haveChip}</p>
+                                <p>O numerze: {animal.chipNumb}</p>
+                                <p>Znaki szczególne: {animal.marks}</p>
+                                <p>Dodatkowe info: {animal.additional}</p>
+                            </div>
+                        </div>
+                            <button onClick={() => this.deleteAnimal(animal.id, i)}>Właściciel znaleziony</button>
+
                     </li>
                 )
         });
@@ -347,7 +353,7 @@ class FoundForm extends React.Component {
                                 <option value="" disabled selected hidden>jest po zabiegu kastracji?</option>
                                 <option value='unknown'>nie wiadomo</option>
                                 <option value='productive'>niekastrowany/niesterylizowany</option>
-                                <option value='eunuch'>kastrowany/<br/>sterylizowana</option>
+                                <option value='eunuch'>kastrowany/sterylizowana</option>
                             </select>
                             <input id='img'
                                    type="text"
@@ -416,8 +422,6 @@ class FoundForm extends React.Component {
         )
     }
 }
-
-
 
 
 export default FoundForm

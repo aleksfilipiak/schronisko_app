@@ -9,6 +9,7 @@ import {
 import FoundAnimal from './FoundAnimal';
 import LostAnimal from './LostAnimal';
 import FirstAid from './FirstAid';
+import RegisterForm from './Registrate';
 import dog from './images/icons8-corgi-48.png';
 import cat from './images/icons8-black-cat-48.png';
 import rabbit from './images/icons8-rabbit-48.png';
@@ -277,28 +278,7 @@ class LoginForm extends React.Component {
     }
 }
 
-class RegisterForm extends React.Component {
-    render() {
-        return (
-            <div>
-                <form action="#/main-page" className='center-col'>
-                    <input type="email" placeholder='Podaj swój email'/>
-                    <input type="pass" placeholder='Podaj hasło'/>
-                    <input type="pass" placeholder='Powtórz hasło'/>
-                    <input type="text" placeholder='Podaj nick'/>
-                    <label htmlFor="">Wybierz typ profilu</label>
-                    <select name="chooseActivity" id="">
-                        <option value="shelterWorker">Pracownik schroniska</option>
-                        <option value="foundationWorker">Pracownik fundacji</option>
-                        <option value="associationMember">Członek stowarzyszenia</option>
-                        <option value="volunteer">Wolontariusz</option>
-                        <option value="private">Profil prywatny</option>
-                    </select>
-                </form>
-            </div>
-        )
-    }
-}
+
 
 class App extends Component {
     render() {
@@ -309,7 +289,7 @@ class App extends Component {
             <HashRouter>
                 <main className='container center-col'>
                     <Route exact path='/' component={LoginForm}/>
-                    <Route path='/register-page' component={RegisterForm}/>
+                    <Route path='/register-page' component={RegisterForm} mainPage='#/main-page'/>
                     <Route path='/main-page' component={MainPage}/>
                     <Route path='/found/:animal' component={FoundAnimal}/>
                     <Route path='/lost/:animal' component={LostAnimal}/>
