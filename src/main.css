@@ -149,7 +149,7 @@ body {
   .addAnimalForm .basicInfo input:nth-child(5) {
     width: 135px; }
   .addAnimalForm .basicInfo select:nth-child(2) {
-    width: 115px; }
+    width: 130px; }
   .addAnimalForm .additionalInfo div:nth-child(2n) {
     justify-content: center;
     align-items: center; }

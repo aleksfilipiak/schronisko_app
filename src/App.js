@@ -69,7 +69,7 @@ class BurgerNav extends React.Component {
 
 class Footer extends React.Component {
     render() {
-        return <p className='footer'>Ikonki pobrane z: <a href='https://icons8.com'>www.icons8.com</a></p>
+        return <p className='footer'>Icons from: <a href='https://icons8.com'>www.icons8.com</a></p>
     }
 }
 
