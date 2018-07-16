@@ -11,7 +11,6 @@ body {
 
 .container {
   width: 1200px;
-  min-height: 500px;
   display: flex;
   background: radial-gradient(ellipse at center, #dde0b1 1%, #72a821 100%);
   font-family: 'Montserrat', sans-serif; }
@@ -48,6 +47,9 @@ body {
         text-decoration: none; }
         .container form.login-form button a:visited {
           text-decoration: none; }
+
+.smallContainer {
+  width: 990px; }
 
 .burger {
   position: fixed;
@@ -179,52 +181,62 @@ body {
     margin-top: 30px; }
 
 /*FoundAnimal.js end*/
+/*AnimalMenager.js start*/
 .ulAnimals {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   list-style: none;
-  border: 1px solid black; }
+  width: 100%;
+  height: 330px; }
 
 .foundOneLi {
   width: 33%;
-  border: 1px solid pink; }
+  height: 100%; }
 
 .foundOne {
-  border: 1px solid red;
-  position: relative; }
-  .foundOne .foundOneHover {
-    border: 1px solid darkmagenta;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden; }
-    .foundOne .foundOneHover:hover {
-      opacity: 0.3; }
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .foundOne button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    border: none;
+    border-radius: 5px; }
 
 .foundOneWhen {
-  border: 1px solid brown;
-  height: 20%;
+  height: 15%;
   background: white;
-  margin: 0; }
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .foundOneInfo {
-  border: 1px solid yellow;
-  transition: .5s ease;
-  opacity: 0;
   position: absolute;
-  top: 165px;
+  top: 15%;
   width: 100%;
-  left: 145px;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
+  background-color: white;
+  transition: .5s ease;
+  overflow: hidden;
+  height: 0; }
   .foundOneInfo p {
     font-size: 0.8em;
-    margin: 0;
-    padding: 0; }
-  .foundOneInfo:hover {
-    opacity: 1; }
+    padding: 0;
+    margin: 2px 10px 0 10px;
+    line-height: 1.5em;
+    background-color: orange; }
 
+.foundOne:hover .foundOneInfo {
+  height: 85%;
+  top: 15%; }
+
+/*AnimalMenager.js end */
 .footer {
   font-size: 0.8em;
   color: #253f71;
@@ -243,9 +255,7 @@ body {
 .filter-div button {
   background-color: white;
   font-family: 'Montserrat', sans-serif;
-  color: #253f71;
-  width: 150px;
-  margin-top: 30px; }
+  color: #253f71; }
 
 .filter {
   margin-left: 10px;

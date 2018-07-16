@@ -96,21 +96,18 @@ class AnimalsMenager extends React.Component {
         //filtrowanie
 
         baseDataReversed = baseDataReversed.filter((animal) => {
-                return animal.sex === this.state.tagFilter
+            return animal.sex === this.state.tagFilter
         });
 
         //wyświetlanie info o zwierzętach
 
         const animals = baseDataReversed.map((animal, i) => {
             if (this.props.kind === animal.spieces)
-                return (
-                    <li key={animal.id} className='foundOneLi'>
-                        <div className='foundOne'>
 
-                            <div className='foundOneWhen foundOneHover'>
-                                <p>Dzień: {animal.day} Godzina: {animal.hour}</p>
-                            </div>
-                            <img className='foundOneHover' src={animal.img} alt=""/>
+                return (
+
+                    <li key={animal.id} className='foundOneLi'>
+                        <div className='foundOne' style={{backgroundImage: `url(${animal.img})`}}>
 
                             <div className='foundOneInfo'>
                                 <p>Rasa/typ: {animal.type}</p>
@@ -118,14 +115,19 @@ class AnimalsMenager extends React.Component {
                                 <p>Czy kastrat: {animal.castration}</p>
                                 <p>Waga: {animal.weight}</p>
                                 <p>Miał przy sobie: {animal.additionalThings}</p>
-                                <p>Miał chip: {animal.haveChip}</p>
+                                <p>Miał chip: {animal.haveChip === true ? 'tak' : 'zmien have chip' }</p>
                                 <p>O numerze: {animal.chipNumb}</p>
                                 <p>Znaki szczególne: {animal.marks}</p>
                                 <p>Dodatkowe info: {animal.additional}</p>
                             </div>
-                        </div>
-                        <button onClick={() => this.deleteAnimal(animal.id, i)}>Właściciel znaleziony</button>
 
+                            <div className='foundOneWhen'>
+                                <p>Dzień: {animal.day} Godzina: {animal.hour}</p>
+                            </div>
+
+
+                            <button onClick={() => this.deleteAnimal(animal.id, i)}>Właściciel znaleziony</button>
+                        </div>
                     </li>
                 )
         });

@@ -19,7 +19,7 @@ constructor (props){
     render() {
 
         return (
-            <div>
+            <div className='smallContainer'>
                 <div className='header'>
                     <h1>Znalezione zwierzę: {this.props.match.params.animal}</h1>
                 </div>
