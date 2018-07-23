@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="40df4d74-3572-42f7-a044-eecf6c3138c1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnimalMenager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimalMenager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FoundAnimal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FoundAnimal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registrate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registrate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testyyy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/testyyy.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,131 +21,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.20833333">
+    <splitter split-orientation="horizontal" split-proportion="0.5238411">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.8120893">
-          <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.475641">
-              <split-first>
-                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                  <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/src/App.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="658">
-                          <caret line="294" column="63" selection-start-line="294" selection-start-column="63" selection-end-line="294" selection-end-column="63" />
-                          <folding>
-                            <element signature="e#0#39#0" expanded="true" />
-                            <element signature="n#BurgerNav#0" />
-                            <element signature="n#MainPage#0" />
-                            <element signature="n#!!block;n#validate#0" />
-                            <element signature="n#LoginForm#0" />
-                          </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-first>
-              <split-second>
-                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                  <file leaf-file-name="FoundAnimal.js" pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/src/FoundAnimal.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="555">
-                          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-                          <folding>
-                            <element signature="e#0#39#0" expanded="true" />
-                          </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-second>
-            </splitter>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="LostAnimal.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/LostAnimal.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="435">
-                      <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-                      <folding>
-                        <element signature="e#0#39#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf>
+          <file leaf-file-name="users-db" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/users-db">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Registrate.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Registrate.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.6235843">
-          <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.7038069">
-              <split-first>
-                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                  <file leaf-file-name="AnimalMenager.js" pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/src/AnimalMenager.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="334">
-                          <caret line="92" column="30" lean-forward="true" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-                          <folding>
-                            <element signature="e#0#39#0" expanded="true" />
-                            <element signature="n#!!block;n#componentDidMount#0;n#AnimalsMenager#0" />
-                            <element signature="n#!!block;n#loadAnimals#0;n#AnimalsMenager#0" />
-                            <element signature="e#1209#1785#0" />
-                          </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-first>
-              <split-second>
-                <leaf>
-                  <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/src/main.scss">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="630">
-                          <caret line="357" column="27" selection-start-line="357" selection-start-column="27" selection-end-line="357" selection-end-column="27" />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-second>
-            </splitter>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="FoundLostForm.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/FoundLostForm.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-1781">
-                      <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
-                      <folding>
-                        <element signature="e#0#39#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/public/index.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="780">
-                      <caret line="52" selection-start-line="52" selection-end-line="52" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf>
+          <file leaf-file-name="testyyy.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/testyyy.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="870">
+                  <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -176,7 +102,6 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/db.json" />
         <option value="$PROJECT_DIR$/src/FindedAnimal.js" />
         <option value="$PROJECT_DIR$/src/FirstAid.js" />
@@ -185,17 +110,18 @@
         <option value="$PROJECT_DIR$/src/users.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/testy.html" />
-        <option value="$PROJECT_DIR$/src/testyyy.js" />
         <option value="$PROJECT_DIR$/src/images/Registration.js" />
         <option value="$PROJECT_DIR$/src/users-db" />
-        <option value="$PROJECT_DIR$/src/Registrate.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/FoundLostForm.js" />
         <option value="$PROJECT_DIR$/src/LostAnimal.js" />
         <option value="$PROJECT_DIR$/src/FoundAnimal.js" />
         <option value="$PROJECT_DIR$/src/main.scss" />
         <option value="$PROJECT_DIR$/src/AnimalMenager.js" />
+        <option value="$PROJECT_DIR$/src/FoundLostForm.js" />
+        <option value="$PROJECT_DIR$/src/testyyy.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/Registrate.js" />
       </list>
     </option>
   </component>
@@ -209,10 +135,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2416" />
-    <option name="y" value="253" />
-    <option name="width" value="757" />
-    <option name="height" value="654" />
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1533" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,6 +152,11 @@
             <path>
               <item name="schronisko_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="schronisko_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="schronisko_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="schronisko_app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="schronisko_app" type="b2602c69:ProjectViewProjectNode" />
@@ -290,25 +221,26 @@
       <workItem from="1531099112850" duration="1220000" />
       <workItem from="1531143451728" duration="27011000" />
       <workItem from="1531331824890" duration="666000" />
-      <workItem from="1531725402056" duration="12508000" />
+      <workItem from="1531725402056" duration="12737000" />
+      <workItem from="1532377331537" duration="3724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208947000" />
+    <option name="totallyTimeSpent" value="212900000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16657881" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16622517" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19810326" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.1967655" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -557,24 +489,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/users.json" />
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testyyy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -590,20 +508,6 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/users-db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Registrate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -624,27 +528,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/AnimalMenager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="294" column="63" selection-start-line="294" selection-start-column="63" selection-end-line="294" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#BurgerNav#0" />
-            <element signature="n#MainPage#0" />
-            <element signature="n#!!block;n#validate#0" />
-            <element signature="n#LoginForm#0" />
-          </folding>
+        <state relative-caret-position="379">
+          <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LostAnimal.js">
+    <entry file="file://$PROJECT_DIR$/src/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="341" column="12" lean-forward="true" selection-start-line="341" selection-start-column="12" selection-end-line="341" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -657,40 +551,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FoundAnimal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="570">
+          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.scss">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="357" column="27" selection-start-line="357" selection-start-column="27" selection-end-line="357" selection-end-column="27" />
+        <state relative-caret-position="432">
+          <caret line="278" column="1" lean-forward="true" selection-start-line="278" selection-start-column="1" selection-end-line="278" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#BurgerNav#0" />
+            <element signature="n#MainPage#0" />
+            <element signature="n#!!block;n#validate#0" />
+            <element signature="n#LoginForm#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LostAnimal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FoundLostForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1781">
-          <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
+        <state relative-caret-position="2865">
+          <caret line="191" column="69" lean-forward="true" selection-start-line="191" selection-start-column="69" selection-end-line="191" selection-end-column="69" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AnimalMenager.js">
+    <entry file="file://$PROJECT_DIR$/src/users-db">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="92" column="30" lean-forward="true" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+        <state relative-caret-position="195">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testyyy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Registrate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#AnimalsMenager#0" />
-            <element signature="n#!!block;n#loadAnimals#0;n#AnimalsMenager#0" />
-            <element signature="e#1209#1785#0" />
           </folding>
         </state>
       </provider>

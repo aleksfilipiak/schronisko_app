@@ -13,21 +13,38 @@ class RegisterForm extends React.Component {
     render() {
         return (
             <div>
-                <form action={this.props.mainPage} className='center-col'>
-                    <input type="email" placeholder='Podaj swój email'/>
-                    <input type="pass" placeholder='Podaj hasło'/>
-                    <input type="pass" placeholder='Powtórz hasło'/>
-                    <input type="text" placeholder='Podaj nick'/>
-                    <label htmlFor="">Wybierz typ profilu</label>
-                    <select name="chooseActivity" id="">
-                        <option value="shelterWorker">Pracownik schroniska</option>
-                        <option value="foundationWorker">Pracownik fundacji</option>
-                        <option value="associationMember">Członek stowarzyszenia</option>
-                        <option value="volunteer">Wolontariusz</option>
-                        <option value="private">Profil prywatny</option>
-                    </select>
-                    <input type="submit" value='Przejdź do serwisu'/>
-                </form>
+                <div className='row d-flex'>
+
+                    <div className='col-lg-12'>
+                        <input type="email" placeholder='Podaj swój email'/>
+                    </div>
+                    <div className='col-lg-12'>
+                        <input type="pass" placeholder='Podaj hasło'/>
+                    </div>
+                    <div className='col-lg-12'>
+                        <input type="pass" placeholder='Powtórz hasło'/>
+                    </div>
+                    <div className='col-lg-12'>
+                        <input type="text" placeholder='Podaj nick'/>
+                    </div>
+                    <div className='col-lg-12'>
+                        <label htmlFor="">Wybierz typ profilu</label>
+                    </div>
+                    <div className='col-lg-12'>
+                        <select name="chooseActivity" id="">
+                            <option value="shelterWorker">Pracownik schroniska</option>
+                            <option value="foundationWorker">Pracownik fundacji</option>
+                            <option value="associationMember">Członek stowarzyszenia</option>
+                            <option value="volunteer">Wolontariusz</option>
+                            <option value="private">Profil prywatny</option>
+                        </select>
+                    </div>
+                    <div className='col-lg-12'>
+                        <form action={this.props.mainPage}>
+                            <input type="submit" value='Przejdź do serwisu'/>
+                        </form>
+                    </div>
+                </div>
             </div>
         )
     }

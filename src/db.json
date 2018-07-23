@@ -682,6 +682,24 @@
       "additional": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKu8tAedP_WfOy9MdTfMchyEeXviP_k-I3uRpB2zmN1HtkWZ0e_w",
       "place": ""
+    },
+    {
+      "id": 60,
+      "dataType": "found",
+      "spieces": "pies",
+      "day": "23.07.2018",
+      "hour": "23:34:24",
+      "type": "",
+      "sex": "",
+      "castration": "",
+      "weight": "",
+      "additionalThings": "",
+      "haveChip": "",
+      "chipNumb": "",
+      "marks": "",
+      "additional": "",
+      "img": "",
+      "place": ""
     }
   ]
 }
